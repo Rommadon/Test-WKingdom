@@ -43,6 +43,7 @@ const Logo = styled.section`
 
 const Body = styled.div`
   height: 100%;
+  background-color: rgba(238,238,238,1);
 `;
  
 class Main extends Component {
