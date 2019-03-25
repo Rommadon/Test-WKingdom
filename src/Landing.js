@@ -12,6 +12,7 @@ const Landing = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%; 
+  background-color: #C0C0C0	;
 `;
 
 const LandingLogo = styled.img`
