@@ -2,18 +2,36 @@ import React, { Component } from "react";
 import {
   NavLink,
 } from "react-router-dom";
-import Question from "./Question";
-import Answer from "./Answer";
+import "./Landing.css"
+import navbarLogo from './images/navbar_logo.png';
+import landingLogo from './images/landing_logo.png';
  
 class Main extends Component {
   render() {
     return (
-      <div>
-        <h1>TEST</h1>
-        <ul className="header">
-          <li><NavLink to="/Question">Question</NavLink></li>
-          <li><NavLink to="/Answer">Answer</NavLink></li>
+      <div className="Landing">
+        <ul className="navbar">
+          <li className="Logo"><img src={ navbarLogo } /></li>
         </ul>
+        <div>
+          <img className="landingLogo" src={ landingLogo } />
+        </div>
+        <div className="container-textLanding">
+          <div className="textLanding">เรียนภาษาอังกฤษออนไลน์กับเจ้าของภาษาเพียง 800 บาท/เดือน</div>
+          <div className="textLanding">หลักสูตรของเราออกแบบเพื่อเป้าหมายของคุณ</div>
+          <div className="textLanding">พัฒนาตัวเองเพื่อเพิ่มโอกาสทางอาชีพ และนำกลับไปใช้ในชีวิตจริง</div>
+        </div>
+        <div>
+          <div className="textLanding">พร้อมแล้วหรือยัง ?</div>
+          <div className="textLanding">วัดระดับภาษากัน</div>
+        </div>
+        <div className="container-start-button">
+          <button className="buttonStart"><NavLink to="/Question">Start</NavLink></button>
+        </div>
+        <div className="container-textLanding">
+          <div className="textLanding">สมัครวันนี้ทดลองเรียนฟรี 7 วัน หากไม่ต้องการวัดระดับ</div>
+          <div className="textLandingHighlight">เริ่มเรียนระดับ Beginner</div>
+        </div>
       </div>
     );
   }
