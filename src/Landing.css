@@ -1,25 +1,8 @@
 .Landing {
   background-image: url(./images/landing_background.png);
-  height: 1000px; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 20px;
-  overflow: hidden;
-  background-color: red;
-}
-
-.logo {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 20px;
-  text-decoration: none;
 }
 
 .landingLogo {
