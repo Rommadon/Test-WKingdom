@@ -2,23 +2,23 @@ export const answers = {
   "answers": [
       {
           "questionId": 1,
-          "answer": "<div>Simple sentence</div>"
+          "answer": "Simple sentence"
       },
       {
           "questionId": 2,
-          "answer": "<div>Complex sentence</div>"
+          "answer": "Complex sentence"
       },
       {
           "questionId": 3,
-          "answer": "<div>Simple sentence</div>"
+          "answer": "Simple sentence"
       },
       {
           "questionId": 4,
-          "answer": "<div>Compound complex sentence</div>"
+          "answer": "Compound complex sentence"
       },
       {
           "questionId": 5,
-          "answer": "<div>Simple sentence</div>"
+          "answer": "Simple sentence"
       }
   ]
 };

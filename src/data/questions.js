@@ -4,50 +4,50 @@ export const questions = {
           "questionId": 1,
           "question": "Only around 20 per cent of students reach a score higher than 60 for this subject.",
           "choices": [
-              "<div>Compound complex sentence</div>",
-              "<div>Simple sentence</div>",
-              "<div>Compound sentence</div>",
-              "<div>Complex sentence</div>"
+              "Compound complex sentence",
+              "Simple sentence",
+              "Compound sentence",
+              "Complex sentence"
           ]
       },
       {
           "questionId": 2,
-          "question": "<div>The 11-year-old boy admitted that he had broken the windows yesterday.</div>",
+          "question": "The 11-year-old boy admitted that he had broken the windows yesterday.",
           "choices": [
-              "<div>Complex sentence</div>",
-              "<div>Compound sentence</div>",
-              "<div>Simple sentence</div>",
-              "<div>Compound complex sentence</div>"
+              "Complex sentence",
+              "Compound sentence",
+              "Simple sentence",
+              "Compound complex sentence"
           ]
       },
       {
           "questionId": 3,
-          "question": "<div>The researcher wants to use his expertise to help the world.</div>",
+          "question": "The researcher wants to use his expertise to help the world.",
           "choices": [
-              "<div>Complex sentence</div>",
-              "<div>Compound sentence</div>",
-              "<div>Compound complex sentence</div>",
-              "<div>Simple sentence</div>"
+              "Complex sentence",
+              "Compound sentence",
+              "Compound complex sentence",
+              "Simple sentence"
           ]
       },
       {
           "questionId": 4,
-          "question": "<div>I can drive you off at the airport, or I can help calling the taxi for you if you want.</div>",
+          "question": "I can drive you off at the airport, or I can help calling the taxi for you if you want.",
           "choices": [
-              "<div>Simple sentence</div>",
-              "<div>Compound complex sentence</div>",
-              "<div>Complex sentence</div>",
-              "<div>Compound sentence</div>"
+              "Simple sentence",
+              "Compound complex sentence",
+              "Complex sentence",
+              "Compound sentence"
           ]
       },
       {
           "questionId": 5,
-          "question": "<div>Thousands of fans have flocked in front of the building.</div>",
+          "question": "Thousands of fans have flocked in front of the building.",
           "choices": [
-              "<div>Compound sentence</div>",
-              "<div>Complex sentence</div>",
-              "<div>Simple sentence</div>",
-              "<div>Compound complex sentence</div>"
+              "Compound sentence",
+              "Complex sentence",
+              "Simple sentence",
+              "Compound complex sentence"
           ]
       }
   ]
