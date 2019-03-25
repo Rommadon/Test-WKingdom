@@ -10,6 +10,17 @@ import Landing from "./Landing";
 import navbarLogo from './images/navbar_logo.png';
  
 class Main extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      arrayAns: [],
+    }
+  }
+
+  getArrayAns = (arrayAns) => {
+    this.setState({arrayAns: arrayAns})
+  }
+
   render() {
     return (
       <HashRouter>
@@ -17,9 +28,9 @@ class Main extends Component {
           <li className="Logo"><img src={ navbarLogo } /></li>
         </ul>
         <div className="content">
-          <Route exact path="/" component={Landing}/>
-          <Route path="/Question" component={Question}/>
-          <Route path="/Answer" component={Answer}/>
+          <Route exact path="/" component={() => <Landing />}/>
+          <Route path="/Question" component={() => <Question getArrayAns={this.getArrayAns}/>}/>
+          <Route path="/Answer" component={() => <Answer arrayAns={this.state.arrayAns}/>}/>
         </div>
       </HashRouter>
     );

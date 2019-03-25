@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {
+  NavLink,
+} from "react-router-dom";
 import { questions } from "./data/questions.js";
 import { answers } from "./data/answers.js";
 import "./Questions.css";
@@ -16,7 +19,8 @@ class Question extends Component {
       status: "",
       statusButton: false,
       statusPopup: false,
-      score: 0
+      score: 0,
+      arrayAns: [],
     }
   }
 
@@ -51,6 +55,7 @@ class Question extends Component {
   }
 
   render() {
+    console.log(this.state.arrayAns)
     return (
       <div className="containerQuestion">
         <div className="bodyQuestions">
@@ -59,6 +64,12 @@ class Question extends Component {
           <div className="containerChoices">
             <button className="choice" onClick={() => {
                 this.setState({currentChoice: this.state.data.questions[this.state.indexCurrentQuestions].choices[0]})
+                if(this.state.arrayAns[this.state.indexCurrentQuestions] == null){
+                  this.state.arrayAns.push(0)
+                } else {
+                  this.state.arrayAns.pop()
+                  this.state.arrayAns.push(0)
+                }
               }}>A. {this.state.data.questions[this.state.indexCurrentQuestions].choices[0]}
             </button>
             {
@@ -80,7 +91,12 @@ class Question extends Component {
           <div className="containerChoices">
             <button className="choice" onClick={() => {
                 this.setState({currentChoice: this.state.data.questions[this.state.indexCurrentQuestions].choices[1]})
-              }}>B. {this.state.data.questions[this.state.indexCurrentQuestions].choices[1]}
+                if(this.state.arrayAns[this.state.indexCurrentQuestions] == null){
+                  this.state.arrayAns.push(1)
+                } else {
+                  this.state.arrayAns.pop()
+                  this.state.arrayAns.push(1)
+                }              }}>B. {this.state.data.questions[this.state.indexCurrentQuestions].choices[1]}
             </button>
             {
                 (this.state.data.questions[this.state.indexCurrentQuestions].choices[1] == this.state.currentChoice && this.state.status == "correct") || 
@@ -101,7 +117,12 @@ class Question extends Component {
           <div className="containerChoices">
             <button className="choice" onClick={() => {
                 this.setState({currentChoice: this.state.data.questions[this.state.indexCurrentQuestions].choices[2]})
-              }}>C. {this.state.data.questions[this.state.indexCurrentQuestions].choices[2]}
+                if(this.state.arrayAns[this.state.indexCurrentQuestions] == null){
+                  this.state.arrayAns.push(2)
+                } else {
+                  this.state.arrayAns.pop()
+                  this.state.arrayAns.push(2)
+                }              }}>C. {this.state.data.questions[this.state.indexCurrentQuestions].choices[2]}
             </button>
             {
                 (this.state.data.questions[this.state.indexCurrentQuestions].choices[2] == this.state.currentChoice && this.state.status == "correct") || 
@@ -122,7 +143,12 @@ class Question extends Component {
           <div className="containerChoices">
             <button className="choice" onClick={() => {
                 this.setState({currentChoice: this.state.data.questions[this.state.indexCurrentQuestions].choices[3]})
-              }}>D. {this.state.data.questions[this.state.indexCurrentQuestions].choices[3]}
+                if(this.state.arrayAns[this.state.indexCurrentQuestions] == null){
+                  this.state.arrayAns.push(3)
+                } else {
+                  this.state.arrayAns.pop()
+                  this.state.arrayAns.push(3)
+                }              }}>D. {this.state.data.questions[this.state.indexCurrentQuestions].choices[3]}
             </button>
             {
                 (this.state.data.questions[this.state.indexCurrentQuestions].choices[3] == this.state.currentChoice && this.state.status == "correct") || 
@@ -150,6 +176,9 @@ class Question extends Component {
           <div className="centered">
             <div className="title-score">Your score</div>
             <div className="show-score">{this.state.score} / 5</div>
+            <div>
+              <button><NavLink to="/Answer" onClick={() => {this.props.getArrayAns(this.state.arrayAns)}} >Solution</NavLink></button>
+            </div>
           </div>
           :
           null
