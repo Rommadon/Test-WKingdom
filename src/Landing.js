@@ -3,16 +3,12 @@ import {
   NavLink,
 } from "react-router-dom";
 import "./Landing.css"
-import navbarLogo from './images/navbar_logo.png';
 import landingLogo from './images/landing_logo.png';
  
 class Main extends Component {
   render() {
     return (
       <div className="Landing">
-        <ul className="navbar">
-          <li className="Logo"><img src={ navbarLogo } /></li>
-        </ul>
         <div>
           <img className="landingLogo" src={ landingLogo } />
         </div>
